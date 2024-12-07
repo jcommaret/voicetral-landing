@@ -5,47 +5,35 @@
 
 .navigation {
   position: fixed;
+  background-color: c.$black;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  height: 100px;
+  width: 100%;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 100;
-  padding: 1rem 2rem;
-  background-color: blue;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 5rem;
-
-  &__container {
-    @include m.flex-row-sb;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
+  @include m.flex-row-sb;
   &__logo {
-    color: c.$white;
-    font-size: 1.5rem;
-    font-weight: f.$bold;
-    text-decoration: none;
-    transition: opacity 0.2s;
-
-    &:hover {
-      opacity: 0.8;
+    img {
+      height: 100px;
+      transition: opacity 0.2s;
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
-
   &__links {
-    @include m.flex;
-    gap: 2rem;
+    margin-right: 20px;
+    @include m.flex-row;
+    gap: 20px;
+    line-height: 100px;
   }
-
   &__link {
-    color: c.$white;
+    color: c.$purple;
     font-weight: f.$normal;
-    text-decoration: none;
     transition: opacity 0.2s;
-
     &:hover {
       opacity: 0.8;
+      color: c.$white;
     }
   }
 }

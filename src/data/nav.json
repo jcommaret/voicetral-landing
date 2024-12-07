@@ -1,17 +1,17 @@
 {
-    "logo": {
-        "text": "MonSite",
-        "path": "/",
-        "image": "logo.png"
+  "logo": {
+    "text": "TGV",
+    "path": "/",
+    "img": "logo"
+  },
+  "links": [
+    {
+      "text": "Accueil",
+      "path": "/"
     },
-    "links": [
-        {
-            "text": "Accueil",
-            "path": "/"
-        },
-        {
-            "text": "À propos",
-            "path": "about"
-        }
-    ]
+    {
+      "text": "À propos",
+      "path": "about"
+    }
+  ]
 }

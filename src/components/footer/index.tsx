@@ -5,7 +5,7 @@ import "./index.scss"
 function Footer() {
   return (
     <footer>
-      <p>&copy; 2024</p>
+      <p>MIT License {new Date().getFullYear()}</p>
     </footer>
   )
 }

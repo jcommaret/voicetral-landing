@@ -1,4 +1,11 @@
-h2 {
-  color: red;
-  margin-top: 200px;
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  &__banner {
+    text-align: center;
+    img {
+      max-width: 800px;
+    }
+  }
 }
