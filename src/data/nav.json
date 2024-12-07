@@ -1,0 +1,16 @@
+{
+    "logo": {
+        "text": "MonSite",
+        "path": "/"
+    },
+    "links": [
+        {
+            "text": "Accueil",
+            "path": "/"
+        },
+        {
+            "text": "À propos",
+            "path": "about"
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+@use '../../styles/utils/_colors' as c;
+@use '../../styles/utils/_fonts' as f;
+@use '../../styles/utils/_breakpoints' as b;
+@use '../../styles/utils/_mixins' as m;
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  background-color: blue;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 5rem;
+
+  &__container {
+    @include m.flex-row-sb;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    color: c.$white;
+    font-size: 1.5rem;
+    font-weight: f.$bold;
+    text-decoration: none;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__links {
+    @include m.flex;
+    gap: 2rem;
+  }
+
+  &__link {
+    color: c.$white;
+    font-weight: f.$normal;
+    text-decoration: none;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
