@@ -3,15 +3,22 @@ TGV is a boilerplate for building APPS and websites with Vite.js, React, TypeScr
 ## Features
 
 [x] [Vite.js](https://vitejs.dev/)
+
 [x] [React](https://react.dev/)
+
 [x] [TypeScript](https://www.typescriptlang.org/)
+
 [x] [SCSS](https://sass-lang.com/)
+
 [x] [React-router](https://reactrouter.com/)  
+
 [x] Navigation
+
 [x] Json files for routes, navigation, content.
 
 ## To do
 [] Graphic assets
+
 [] More components
 
 ## Folder structur
