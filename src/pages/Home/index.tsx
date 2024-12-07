@@ -1,4 +1,4 @@
-import './index.scss';
+import "./index.scss"
 
 function Home() {
   return (
@@ -8,4 +8,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Home

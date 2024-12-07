@@ -1,21 +1,18 @@
-// React
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom"
+import { NavData } from "../../types/nav.types"
+import nav from "../../data/nav.json"
 
-// Data 
-import nav from '../../data/nav.json';
+import "./index.scss"
 
-// Styles
-import './index.scss';
-
-// Component
-function Nav() {
+function Nav(): JSX.Element {
+  const navData = nav as NavData
   return (
     <>
       <header>
         <nav className="navigation">
-          <h1 className="navigation__logo">{nav.logo.text}</h1>
+          <h1 className="navigation__logo">{navData.logo.text}</h1>
           <ul className="navigation__links">
-            {nav.links.map((link) => (
+            {navData.links.map((link) => (
               <li key={link.text}>
                 <Link to={link.path}>{link.text}</Link>
               </li>

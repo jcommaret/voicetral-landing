@@ -3,10 +3,10 @@ import * as React from "react"
 import * as ReactDOM from "react-dom/client"
 import { HashRouter as Router, Routes, Route } from "react-router-dom"
 
-import Root from './pages/Root'
-import Home from './pages/Home'
-import About from './pages/About'
-import ErrorPage from './pages/ErrorPage'
+import Root from "./pages/Root"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import ErrorPage from "./pages/ErrorPage"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -19,4 +19,4 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       </Routes>
     </Router>
   </React.StrictMode>
-);
+)

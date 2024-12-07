@@ -1,8 +1,19 @@
-TGV is a boilerplate for building APPS and websites with Vite.js, React, TypeScript, SCSS, it also features react-router and helmet for SEO. 
+# TGV
+
+## Project
+
+TGV is a boilerplate for building websites with Vite.js, React, TypeScript, SCSS, deployed on GitHub Pages, it also features react-router navigation and json files for routes, navigation, content, assets. And a 404.html that redirects lost pages to the homepage using hashrouter.
 
 ## Features
 
-[x] [Vite.js](https://vitejs.dev/)
+- [x] [Vite.js](https://vitejs.dev/)
+- [x] [React](https://react.dev/)
+- [x] [TypeScript](https://www.typescriptlang.org/)
+- [x] [SCSS](https://sass-lang.com/)
+- [x] [React-router](https://reactrouter.com/)
+- [x] Navigation
+- [x] Json files for routes, navigation, content.
+      [x] [Vite.js](https://vitejs.dev/)
 
 [x] [React](https://react.dev/)
 
@@ -10,20 +21,23 @@ TGV is a boilerplate for building APPS and websites with Vite.js, React, TypeScr
 
 [x] [SCSS](https://sass-lang.com/)
 
-[x] [React-router](https://reactrouter.com/)  
+[x] [React-router](https://reactrouter.com/)
 
 [x] Navigation
 
 [x] Json files for routes, navigation, content.
 
 ## To do
-[] Graphic assets
+
+- [ ] Graphic assets
+- [ ] More components
+      [] Graphic assets
 
 [] More components
 
-## Folder structur
+## Folder structure
 
-- 404.html (to redirect to the pages to the gh-pages)
+- 404.html (to redirect lost page to the pages to the gh-pages)
 - src
   - assets
     - images.tsx
@@ -38,10 +52,10 @@ TGV is a boilerplate for building APPS and websites with Vite.js, React, TypeScr
       - index.scss
   - styles
     - utils
-      - _breakpoints.scss
-      - _colors.scss
-      - _fonts.scss
-      - _mixins.scss
+      - \_breakpoints.scss
+      - \_colors.scss
+      - \_fonts.scss
+      - \_mixins.scss
   - pages
     - Root
       - index.tsx

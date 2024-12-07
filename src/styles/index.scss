@@ -1,6 +1,6 @@
-@use './utils/_reset.scss';
-@use './utils/_colors.scss' as c;
-@use './utils/_fonts.scss' as f;
+@use "./utils/_reset.scss";
+@use "./utils/_colors.scss" as c;
+@use "./utils/_fonts.scss" as f;
 
 :root {
   background-color: c.$black;
@@ -24,5 +24,4 @@ p {
 
 main {
   margin-top: 200px;
-  ;
 }

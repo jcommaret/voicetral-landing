@@ -1,5 +1,5 @@
 // Styles
-import './index.scss';
+import "./index.scss"
 
 // Component
 function Footer() {
@@ -7,7 +7,7 @@ function Footer() {
     <footer>
       <p>&copy; 2024</p>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

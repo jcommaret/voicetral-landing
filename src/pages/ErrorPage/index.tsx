@@ -1,8 +1,10 @@
-import './index.scss';
+import "./index.scss"
 
 function ErrorPage() {
   return (
-    <p>ErrorPage</p>
+    <>
+      <p>ErrorPage</p>
+    </>
   )
 }
 

@@ -1,7 +1,8 @@
 {
     "logo": {
         "text": "MonSite",
-        "path": "/"
+        "path": "/",
+        "image": "logo.png"
     },
     "links": [
         {
