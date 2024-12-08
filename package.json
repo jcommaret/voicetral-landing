@@ -1,6 +1,6 @@
 {
   "name": "tgv",
-  "homepage": "https://jcommaret.github.io/tgv",
+  "homepage": "https://jcommaret.github.io/tgv/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "tsc -b && vite build && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.3.1",
