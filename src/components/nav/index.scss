@@ -13,12 +13,10 @@
   z-index: 100;
   @include m.flex-row-sb;
   &__logo {
+    font-family: f.$roboto;
+    color: #fff;
     img {
       height: 100px;
-      transition: opacity 0.2s;
-      &:hover {
-        opacity: 0.8;
-      }
     }
   }
   &__links {

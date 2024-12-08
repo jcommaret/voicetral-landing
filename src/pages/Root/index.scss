@@ -16,10 +16,18 @@ header {
 main {
   margin-top: 100px;
   height: calc(100vh - 400px);
-  padding: 0px 100px;
+  padding: 0px 20px;
 }
 
 footer {
-  margin-top: 100px;
+  margin-top: 0px;
   padding: 20px 0px 20px 0px;
+}
+
+a {
+  color: c.$white;
+  text-decoration: none;
+  &:hover {
+    color: c.$purple;
+  }
 }
