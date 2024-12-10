@@ -35,6 +35,7 @@ TGV is a boilerplate for building websites with Vite.js, React, TypeScript, SCSS
 
 ## Deployement
 
+- In package.json, change the homepage path to your repository name.
 - Open a terminal in the project folder
 - Run `npm run deploy` to deploy the project on GitHub Pages
 
