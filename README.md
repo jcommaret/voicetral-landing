@@ -4,7 +4,9 @@
 
 TGV is a boilerplate for building websites with Vite.js, React, TypeScript, SCSS, deployed on GitHub Pages, it also features react-router navigation and json files for routes, navigation, content, assets. And a 404.html that redirects lost pages to the homepage using hashrouter.
 
-## Features
+## Prerequisites
+
+- A good understanding of [GitHub Pages](https://docs.github.com/en/pages)
 
 - [x] [Vite.js](https://vitejs.dev/)
 - [x] [React](https://react.dev/)
@@ -16,8 +18,25 @@ TGV is a boilerplate for building websites with Vite.js, React, TypeScript, SCSS
 
 ## To do
 
-- [ ] Graphic assets
+- [ ] Improve responsive assets
 - [ ] More components
+
+## Installation
+
+- Clone the repository
+- Open a terminal in the project folder
+- Run `npm install` to install the dependencies
+
+## Development
+
+- Run `npm run dev` to start the development server
+
+## Deployement
+
+- Open a terminal in the project folder
+- Run `npm run deploy` to deploy the project on GitHub Pages
+
+Your are done.
 
 ## Folder structure
 
