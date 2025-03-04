@@ -8,7 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/tgv/",
+  base: "/voicetral-landing/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
