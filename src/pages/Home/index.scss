@@ -1,36 +1,73 @@
+@use 'sass:color';
 @use '../../styles/variables' as *;
+
+// Styles des icônes Material
+.material-icons, .material-icons-outlined {
+  vertical-align: middle;
+  font-size: 1.5rem;
+}
+
+.icon-lg {
+  font-size: 2.5rem;
+}
+
+.icon-accent {
+  color: $accent;
+}
+
+.icon-primary {
+  color: $primary;
+}
+
+.icon-secondary {
+  color: $secondary;
+}
 
 .home {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 $spacing-lg;
+  font-family: $font-family-base;
 
   section {
     padding: $spacing-xl 0;
     position: relative;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-heading;
+    letter-spacing: $letter-spacing-tight;
+  }
+
   // Hero Section
   .hero {
     min-height: 90vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: $spacing-xl;
+    justify-content: center;
+    text-align: center;
     padding-top: $spacing-lg;
 
     &__logo {
       margin-bottom: $spacing-md;
+      display: inline-block;
+      position: relative;
+      
       img {
         height: 60px;
-        width: auto;
+        width: 60px;
+        object-fit: contain;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
       }
     }
 
     &__content {
-      flex: 1;
+      max-width: 800px;
       h1 {
         font-size: 4rem;
-        font-weight: 800;
+        font-weight: $font-weight-extrabold;
         background: $gradient-primary;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -39,9 +76,11 @@
 
       .hero__subtitle {
         font-size: 1.5rem;
+        font-weight: $font-weight-light;
         color: $text-secondary;
         margin-bottom: $spacing-lg;
         line-height: 1.4;
+        letter-spacing: $letter-spacing-wide;
       }
     }
 
@@ -49,78 +88,30 @@
       display: flex;
       gap: $spacing-md;
       margin-bottom: $spacing-xl;
+      justify-content: center;
     }
 
-    &__stats {
+    &__available-platforms {
       display: flex;
-      gap: $spacing-xl;
+      align-items: center;
+      gap: $spacing-sm;
+      margin-bottom: $spacing-xl;
+      padding: $spacing-sm $spacing-md;
+      background-color: rgba($primary, 0.1);
+      border-radius: $border-radius-full;
+      color: $text-secondary;
+      max-width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
       
-      .stat {
-        &__number {
-          display: block;
-          font-size: 2rem;
-          font-weight: 700;
-          color: $primary;
-        }
-        
-        &__label {
-          color: $text-secondary;
-          font-size: 0.9rem;
-        }
+      .material-icons {
+        color: $primary;
+        font-size: 1.2rem;
       }
-    }
-
-    &__image {
-      flex: 1;
-      position: relative;
-
-      &-wrapper {
-        position: relative;
-        padding: $spacing-lg;
-      }
-
-      .hero__main-image {
-        width: 100%;
-        height: auto;
-        border-radius: $border-radius-lg;
-        box-shadow: $shadow-xl;
-      }
-
-      .hero__floating-elements {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-
-        .floating-bubble {
-          position: absolute;
-          background: $white;
-          padding: $spacing-sm $spacing-md;
-          border-radius: $border-radius-full;
-          display: flex;
-          align-items: center;
-          gap: $spacing-sm;
-          box-shadow: $shadow-md;
-          font-size: 0.9rem;
-
-          &--1 {
-            top: 10%;
-            left: -5%;
-          }
-
-          &--2 {
-            top: 40%;
-            right: -10%;
-          }
-
-          &--3 {
-            bottom: 15%;
-            left: 10%;
-          }
-
-          .bubble-icon {
-            font-size: 1.2rem;
-          }
-        }
+      
+      p {
+        font-size: 0.9rem;
+        font-weight: $font-weight-medium;
       }
     }
   }
@@ -133,25 +124,27 @@
     margin: $spacing-xl 0;
 
     h2 {
-      font-size: 2.5rem;
       text-align: center;
+      font-size: 2.5rem;
+      font-weight: $font-weight-bold;
       margin-bottom: $spacing-xl;
-      color: $text-primary;
+      background: $gradient-primary;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     &__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: $spacing-lg;
     }
 
     .feature-card {
       background: $white;
-      padding: $spacing-xl;
-      border-radius: $border-radius-md;
-      text-align: center;
+      border-radius: $border-radius-lg;
+      padding: $spacing-lg;
+      box-shadow: $shadow-md;
       transition: $transition-base;
-      border: 1px solid rgba($primary, 0.1);
 
       &:hover {
         transform: translateY(-5px);
@@ -164,14 +157,16 @@
       }
 
       h3 {
+        font-size: 1.5rem;
+        font-weight: $font-weight-semibold;
+        margin-bottom: $spacing-sm;
         color: $text-primary;
-        margin-bottom: $spacing-md;
-        font-size: 1.25rem;
       }
 
       p {
         color: $text-secondary;
         line-height: 1.6;
+        font-weight: $font-weight-regular;
       }
     }
   }
@@ -182,40 +177,56 @@
     padding: $spacing-xl 0;
 
     h2 {
+      text-align: center;
       font-size: 2.5rem;
+      font-weight: $font-weight-bold;
       margin-bottom: $spacing-xl;
       color: $text-primary;
     }
 
     .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: $spacing-xl;
+      display: flex;
+      justify-content: space-between;
+      gap: $spacing-lg;
+      margin-top: $spacing-lg;
+      
+      @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+      }
     }
 
     .step {
+      background: $white;
+      border-radius: $border-radius-lg;
+      padding: $spacing-lg;
+      box-shadow: $shadow-md;
+      flex: 1;
+      position: relative;
+      
       &__number {
-        width: 50px;
-        height: 50px;
-        background: $gradient-secondary;
-        color: $white;
-        border-radius: $border-radius-full;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $gradient-primary;
+        color: $white;
+        font-weight: $font-weight-bold;
         font-size: 1.5rem;
-        font-weight: 600;
-        margin: 0 auto $spacing-md;
+        margin-bottom: $spacing-md;
       }
 
       h3 {
-        color: $text-primary;
+        font-size: 1.4rem;
+        font-weight: $font-weight-semibold;
         margin-bottom: $spacing-sm;
-        font-size: 1.25rem;
+        color: $text-primary;
       }
 
       p {
         color: $text-secondary;
+        font-weight: $font-weight-regular;
       }
     }
   }
@@ -247,13 +258,16 @@
 
     h2 {
       font-size: 2.5rem;
+      font-weight: $font-weight-bold;
       margin-bottom: $spacing-md;
     }
 
     p {
       font-size: 1.2rem;
+      font-weight: $font-weight-light;
       margin-bottom: $spacing-lg;
       opacity: 0.9;
+      letter-spacing: $letter-spacing-wide;
     }
 
     &__buttons {
@@ -338,13 +352,16 @@
 .cta-button {
   padding: $spacing-md $spacing-xl;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: $font-weight-medium;
+  font-family: $font-family-heading;
   border: none;
   border-radius: $border-radius-full;
   cursor: pointer;
   transition: $transition-base;
   background: $gradient-primary;
   color: $white;
+  letter-spacing: $letter-spacing-wide;
+  text-transform: uppercase;
 
   &:hover {
     transform: translateY(-2px);
@@ -382,13 +399,10 @@
       &__buttons {
         justify-content: center;
       }
-
-      &__stats {
-        justify-content: center;
-      }
-
-      &__image {
-        margin-top: $spacing-xl;
+      
+      &__available-platforms {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 
@@ -400,5 +414,66 @@
         align-items: center;
       }
     }
+  }
+}
+
+// Footer styles
+.footer {
+  text-align: center;
+  padding: $spacing-xl $spacing-lg;
+  margin-top: $spacing-xl;
+  border-top: 1px solid rgba($text-secondary, 0.1);
+  color: $text-secondary;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: rgba($primary, 0.05);
+  
+  p {
+    margin-bottom: $spacing-sm;
+    font-size: 1.1rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .material-icons {
+      font-size: 1rem;
+      color: $accent;
+      vertical-align: middle;
+      margin: 0 $spacing-xs;
+    }
+  }
+  
+  &__joke {
+    font-style: italic;
+    font-size: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: $spacing-lg;
+    background-color: rgba($primary, 0.08);
+    border-radius: $border-radius-lg;
+    line-height: 1.6;
+    
+    .material-icons {
+      color: $primary;
+    }
+  }
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  color: $primary;
+  text-decoration: none;
+  margin-top: $spacing-sm;
+  font-weight: $font-weight-medium;
+  transition: $transition-base;
+  
+  &:hover {
+    color: color.adjust($primary, $lightness: -10%);
+    text-decoration: underline;
+  }
+  
+  .material-icons {
+    margin-right: $spacing-xs;
   }
 }
