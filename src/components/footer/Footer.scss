@@ -1,0 +1,33 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  text-align: center;
+  margin-top: $spacing-xl;
+  border-top: 1px solid rgba($text-secondary, 0.1);
+  color: $text-secondary;
+  width: 100%;
+  background-color: rgba($primary, 0.05);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding: $spacing-md 0;
+  left: 0;
+  right: 0;
+  
+  p {
+    margin-bottom: $spacing-sm;
+    font-size: 1.1rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 $spacing-md;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-lg $spacing-sm;
+    
+    p {
+      font-size: 0.9rem;
+    }
+  }
+} 

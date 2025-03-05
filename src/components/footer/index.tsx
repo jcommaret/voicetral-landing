@@ -1,24 +1,19 @@
-// Styles
-import "./index.scss"
+import React from 'react';
+import { FooterContent } from '../../types';
+import './Footer.scss';
 
-// Component
-function Footer() {
-  const currentYear = new Date().getFullYear()
-
-  return (
-    <footer>
-      <p>
-        © {currentYear} - Licence MIT - Ce projet est sous licence{" "}
-        <a
-          href="https://opensource.org/licenses/MIT"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          MIT
-        </a>
-      </p>
-    </footer>
-  )
+interface FooterProps {
+  content: FooterContent;
 }
 
-export default Footer
+const Footer: React.FC<FooterProps> = ({ content }) => {
+  return (
+    <footer className="footer">
+      <p>
+        {content.text} {content.author} - {content.year}
+      </p>
+    </footer>
+  );
+};
+
+export default Footer;

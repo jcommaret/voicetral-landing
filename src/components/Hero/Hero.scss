@@ -1,0 +1,100 @@
+@use '../../styles/variables' as *;
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: $spacing-lg;
+
+  &__logo {
+    margin-bottom: $spacing-md;
+    display: inline-block;
+    position: relative;
+    
+    img {
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__content {
+    max-width: 800px;
+    h1 {
+      font-size: 4rem;
+      font-weight: $font-weight-extrabold;
+      background: $gradient-primary;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: $spacing-md;
+    }
+
+    .hero__subtitle {
+      font-size: 1.5rem;
+      font-weight: $font-weight-light;
+      color: $text-secondary;
+      margin-bottom: $spacing-lg;
+      line-height: 1.4;
+      letter-spacing: $letter-spacing-wide;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: $spacing-md;
+    margin-bottom: $spacing-xl;
+    justify-content: center;
+  }
+}
+
+// Ajout des styles du bouton CTA directement dans le fichier du composant Hero
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-md $spacing-xl;
+  font-size: 1.1rem;
+  font-weight: $font-weight-medium;
+  font-family: $font-family-heading;
+  border: none;
+  border-radius: $border-radius-full;
+  cursor: pointer;
+  transition: $transition-base;
+  background: $gradient-primary;
+  color: $white;
+  letter-spacing: $letter-spacing-wide;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  .material-icons {
+    margin-right: $spacing-sm;
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .hero {
+    padding-top: $spacing-xl;
+    
+    &__content {
+      h1 {
+        font-size: 3rem;
+      }
+      
+      .hero__subtitle {
+        font-size: 1.2rem;
+      }
+    }
+  }
+} 

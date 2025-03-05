@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "logo": "logo",
+    "title": "Voicetral",
+    "subtitle": "Discutez naturellement avec une IA par la voix",
+    "button": {
+      "text": "Télécharger l'application",
+      "url": "https://testflight.apple.com/join/Tm11XebX",
+      "icon": "phone_iphone"
+    }
+  },
+  "footer": {
+    "text": "Site et application créée par",
+    "author": "Jérôme Commaret",
+    "year": 2025
+  }
+} 

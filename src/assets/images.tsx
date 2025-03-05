@@ -1,4 +1,6 @@
+import logoImage from './logo/logo.png';
+
 const img = {
-  logo: new URL("./logo/logo.png", import.meta.url).href,
+  logo: logoImage,
 }
 export default img
