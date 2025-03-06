@@ -1,20 +1,37 @@
 {
+  /* Configuration générale de l'application */
   "app": {
+    /* Nom de l'application affiché dans les titres */
     "name": "Voicetral",
+    /* Domaine principal pour les URLs absolues */
     "domain": "https://voicetral.com",
+    /* Description courte de l'application */
     "description": "Discutez naturellement avec une IA par la voix",
+    /* Chemin de base pour les URLs (utilisé principalement en production) */
     "basePath": "/voicetral-landing"
   },
+  /* Chemins vers les images principales */
   "images": {
+    /* Chemin vers le logo principal */
     "logo": "/images/logo.png",
+    /* Chemin vers l'image pour les partages sur réseaux sociaux */
     "socialShare": "/images/social-share.jpg",
+    /* Chemin vers l'icône du site (favicon) */
     "favicon": "/images/favicon.ico"
   },
+  /* Configuration spécifique à chaque environnement */
   "env": {
+    /* Configuration pour l'environnement de développement */
     "development": {
+      /* Chemin de base vide en développement */
       "basePath": ""
     },
+    /* Configuration pour l'environnement de production */
     "production": {
+      /* 
+        Chemin de base en production (GitHub Pages)
+        Ce chemin correspond au nom du dépôt GitHub
+      */
       "basePath": "/voicetral-landing"
     }
   }
