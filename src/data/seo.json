@@ -1,0 +1,22 @@
+{
+  "home": {
+    "title": "Voicetral - IA conversationnelle par la voix",
+    "description": "Discutez naturellement avec une IA par la voix grâce à Voicetral. Téléchargez l'application iOS dès maintenant.",
+    "keywords": "IA, voix, intelligence artificielle, iOS, application, conversation, vocal, Mistral IA",
+    "ogTitle": "Voicetral - IA conversationnelle par la voix",
+    "ogDescription": "Discutez naturellement avec une IA par la voix. téléchargez l'application iOS dès maintenant !",
+    "ogImage": "/og-image.jpg",
+    "ogUrl": "https://jcommaret.github.io/voicetral-landing/",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Voicetral - IA conversationnelle par la voix",
+    "twitterDescription": "Discutez naturellement avec une IA par la voix. Rejoignez la beta TestFlight pour iOS !",
+    "twitterImage": "/twitter-image.jpg",
+    "canonicalUrl": "https://jcommaret.github.io/voicetral-landing/"
+  },
+  "error": {
+    "title": "Page non trouvée | Voicetral",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "noIndex": true,
+    "canonicalUrl": "https://jcommaret.github.io/voicetral-landing/404.html"
+  }
+} 

@@ -1,0 +1,61 @@
+@use '../../styles/variables' as *;
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: $spacing-lg;
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-md;
+    color: $text-primary;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: $text-secondary;
+    margin-bottom: $spacing-lg;
+    max-width: 500px;
+  }
+  
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-md $spacing-xl;
+    font-size: 1.1rem;
+    font-weight: $font-weight-medium;
+    font-family: $font-family-heading;
+    border: none;
+    border-radius: $border-radius-full;
+    cursor: pointer;
+    transition: $transition-base;
+    background: $gradient-primary;
+    color: $white;
+    letter-spacing: $letter-spacing-wide;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow-md;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .error-page {
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+  }
+}

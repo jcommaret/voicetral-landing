@@ -23,6 +23,18 @@
     box-sizing: border-box;
   }
   
+  .author-link {
+    color: $primary-dark;
+    text-decoration: none;
+    font-weight: $font-weight-medium;
+    transition: $transition-base;
+    
+    &:hover {
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
+  
   @media (max-width: $breakpoint-md) {
     padding: $spacing-lg $spacing-sm;
     
