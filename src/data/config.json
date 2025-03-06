@@ -1,0 +1,12 @@
+{
+  "app": {
+    "name": "Voicetral",
+    "domain": "https://voicetral.com",
+    "description": "Discutez naturellement avec une IA par la voix"
+  },
+  "images": {
+    "logo": "/images/logo.png",
+    "socialShare": "img.socialShare",
+    "favicon": "/images/favicon.ico"
+  }
+} 

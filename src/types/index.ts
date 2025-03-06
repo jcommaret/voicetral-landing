@@ -42,4 +42,21 @@ export interface SEOContent {
   home: SEOData;
   error: SEOData;
   [key: string]: SEOData;
+}
+
+export interface AppConfig {
+  name: string;
+  domain: string;
+  description: string;
+}
+
+export interface ImagesConfig {
+  logo: string;
+  socialShare: string;
+  favicon: string;
+}
+
+export interface SiteConfig {
+  app: AppConfig;
+  images: ImagesConfig;
 } 

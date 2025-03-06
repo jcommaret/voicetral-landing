@@ -2,15 +2,9 @@
   "home": {
     "title": "Voicetral - IA conversationnelle par la voix",
     "description": "Discutez naturellement avec une IA par la voix grâce à Voicetral. Téléchargez l'application iOS dès maintenant.",
-    "keywords": "IA, voix, intelligence artificielle, iOS, application, conversation, vocal, Mistral IA",
+    "keywords": "IA, voix, intelligence artificielle, iOS, application, conversation, vocal, TestFlight, beta",
     "ogTitle": "Voicetral - IA conversationnelle par la voix",
-    "ogDescription": "Discutez naturellement avec une IA par la voix. téléchargez l'application iOS dès maintenant !",
-    "ogImage": "/og-image.jpg",
-    "ogUrl": "https://jcommaret.github.io/voicetral-landing/",
-    "twitterCard": "summary_large_image",
-    "twitterTitle": "Voicetral - IA conversationnelle par la voix",
-    "twitterDescription": "Discutez naturellement avec une IA par la voix. Rejoignez la beta TestFlight pour iOS !",
-    "twitterImage": "/twitter-image.jpg",
+    "ogDescription": "Discutez naturellement avec une IA par la voix. Rejoignez la beta TestFlight pour iOS !",
     "canonicalUrl": "https://jcommaret.github.io/voicetral-landing/"
   },
   "error": {

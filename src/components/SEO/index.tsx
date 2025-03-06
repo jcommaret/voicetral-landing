@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import config from '../../data/config.json';
+import { SiteConfig } from '../../types';
 
 interface SEOProps {
   title?: string;
@@ -18,19 +20,21 @@ interface SEOProps {
   lang?: string;
 }
 
+const siteConfig = config as SiteConfig;
+
 const defaultSEO = {
-  title: 'Voicetral - IA conversationnelle par la voix',
-  description: 'Discutez naturellement avec une IA par la voix grâce à Voicetral. Téléchargez l\'application iOS dès maintenant.',
+  title: `${siteConfig.app.name} - ${siteConfig.app.description}`,
+  description: siteConfig.app.description,
   keywords: 'IA, voix, intelligence artificielle, iOS, application, conversation, vocal',
-  ogTitle: 'Voicetral - IA conversationnelle par la voix',
-  ogDescription: 'Discutez naturellement avec une IA par la voix',
-  ogImage: '/og-image.jpg',
-  ogUrl: 'https://voicetral.com',
+  ogTitle: `${siteConfig.app.name} - ${siteConfig.app.description}`,
+  ogDescription: siteConfig.app.description,
+  ogImage: `${siteConfig.app.domain}${siteConfig.images.socialShare}`,
+  ogUrl: siteConfig.app.domain,
   twitterCard: 'summary_large_image' as const,
-  twitterTitle: 'Voicetral - IA conversationnelle par la voix',
-  twitterDescription: 'Discutez naturellement avec une IA par la voix',
-  twitterImage: '/twitter-image.jpg',
-  canonicalUrl: 'https://voicetral.com',
+  twitterTitle: `${siteConfig.app.name} - ${siteConfig.app.description}`,
+  twitterDescription: siteConfig.app.description,
+  twitterImage: `${siteConfig.app.domain}${siteConfig.images.socialShare}`,
+  canonicalUrl: siteConfig.app.domain,
   noIndex: false,
   lang: 'fr',
 };
@@ -53,6 +57,10 @@ const SEO: React.FC<SEOProps> = (props) => {
     lang,
   } = { ...defaultSEO, ...props };
 
+  // Si une image spécifique n'est pas fournie, utilisez l'image sociale par défaut
+  const finalOgImage = ogImage || defaultSEO.ogImage;
+  const finalTwitterImage = twitterImage || defaultSEO.twitterImage;
+
   return (
     <Helmet>
       {/* Balises standard */}
@@ -64,7 +72,7 @@ const SEO: React.FC<SEOProps> = (props) => {
       {/* Open Graph */}
       <meta property="og:title" content={ogTitle || title} />
       <meta property="og:description" content={ogDescription || description} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={finalOgImage} />
       <meta property="og:url" content={ogUrl} />
       <meta property="og:type" content="website" />
 
@@ -72,10 +80,13 @@ const SEO: React.FC<SEOProps> = (props) => {
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={twitterTitle || ogTitle || title} />
       <meta name="twitter:description" content={twitterDescription || ogDescription || description} />
-      <meta name="twitter:image" content={twitterImage || ogImage} />
+      <meta name="twitter:image" content={finalTwitterImage} />
 
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Favicon */}
+      <link rel="icon" href={siteConfig.images.favicon} />
 
       {/* No index si spécifié */}
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
