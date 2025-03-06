@@ -1,4 +1,5 @@
 import config from '../data/config.json';
+import { SiteConfig } from '../types';
 
 /**
  * Détermine si l'application est en mode production
@@ -11,7 +12,11 @@ export const isProduction = (): boolean => {
  * Retourne le chemin de base de l'application en fonction de l'environnement
  */
 export const getBasePath = (): string => {
-  return isProduction() ? config.env.production.basePath : config.env.development.basePath;
+  // Utiliser le type correct pour config
+  const typedConfig = config as SiteConfig;
+  return isProduction() 
+    ? typedConfig.env.production.basePath 
+    : typedConfig.env.development.basePath;
 };
 
 /**
@@ -42,7 +47,9 @@ export const buildPath = (path: string): string => {
  * @returns L'URL complète
  */
 export const buildUrl = (path: string): string => {
-  const domain = config.app.domain;
+  // Utiliser le type correct pour config
+  const typedConfig = config as SiteConfig;
+  const domain = typedConfig.app.domain;
   const fullPath = buildPath(path);
   
   // Si le chemin est déjà une URL complète, le retourner tel quel

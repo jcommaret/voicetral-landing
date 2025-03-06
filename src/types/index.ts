@@ -44,10 +44,15 @@ export interface SEOContent {
   [key: string]: SEOData;
 }
 
+export interface EnvConfig {
+  basePath: string;
+}
+
 export interface AppConfig {
   name: string;
   domain: string;
   description: string;
+  basePath: string;
 }
 
 export interface ImagesConfig {
@@ -59,4 +64,8 @@ export interface ImagesConfig {
 export interface SiteConfig {
   app: AppConfig;
   images: ImagesConfig;
+  env: {
+    development: EnvConfig;
+    production: EnvConfig;
+  };
 } 

@@ -2,11 +2,20 @@
   "app": {
     "name": "Voicetral",
     "domain": "https://voicetral.com",
-    "description": "Discutez naturellement avec une IA par la voix"
+    "description": "Discutez naturellement avec une IA par la voix",
+    "basePath": "/voicetral-landing"
   },
   "images": {
     "logo": "/images/logo.png",
-    "socialShare": "img.socialShare",
+    "socialShare": "/images/social-share.jpg",
     "favicon": "/images/favicon.ico"
+  },
+  "env": {
+    "development": {
+      "basePath": ""
+    },
+    "production": {
+      "basePath": "/voicetral-landing"
+    }
   }
 } 

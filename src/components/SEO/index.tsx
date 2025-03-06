@@ -2,6 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import config from '../../data/config.json';
 import { SiteConfig } from '../../types';
+import { buildUrl } from '../../utils/pathUtils';
+import img from '../../assets/images';
 
 interface SEOProps {
   title?: string;
@@ -28,13 +30,13 @@ const defaultSEO = {
   keywords: 'IA, voix, intelligence artificielle, iOS, application, conversation, vocal',
   ogTitle: `${siteConfig.app.name} - ${siteConfig.app.description}`,
   ogDescription: siteConfig.app.description,
-  ogImage: `${siteConfig.app.domain}${siteConfig.images.socialShare}`,
-  ogUrl: siteConfig.app.domain,
+  ogImage: img.socialShare,
+  ogUrl: buildUrl(''),
   twitterCard: 'summary_large_image' as const,
   twitterTitle: `${siteConfig.app.name} - ${siteConfig.app.description}`,
   twitterDescription: siteConfig.app.description,
-  twitterImage: `${siteConfig.app.domain}${siteConfig.images.socialShare}`,
-  canonicalUrl: siteConfig.app.domain,
+  twitterImage: img.socialShare,
+  canonicalUrl: buildUrl(''),
   noIndex: false,
   lang: 'fr',
 };
@@ -86,7 +88,7 @@ const SEO: React.FC<SEOProps> = (props) => {
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Favicon */}
-      <link rel="icon" href={siteConfig.images.favicon} />
+      <link rel="icon" href={img.favicon} />
 
       {/* No index si spécifié */}
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
