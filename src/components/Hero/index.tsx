@@ -10,7 +10,7 @@
  */
 import React from 'react';
 import { HeroContent } from '../../types';
-import { buildPath } from '../../utils/pathUtils';
+import { buildPath } from '@utils/pathUtils';
 import './Hero.scss';
 
 /**

@@ -20,6 +20,8 @@
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
+      "@data/*": ["src/data/*"],
+      "@utils/*": ["src/utils/*"],
       "@assets/*": ["src/assets/*"],
       "@styles/*": ["src/styles/*"],
       "@types/*": ["src/types/*"]

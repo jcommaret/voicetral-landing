@@ -17,9 +17,9 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import { HelmetProvider } from "react-helmet-async"
 
 // Composants de page
-import Root from "./pages/Root"        // Composant racine (layout principal)
-import Home from "./pages/Home"        // Page d'accueil
-import ErrorPage from "./pages/ErrorPage" // Page d'erreur 404
+import Root from "@pages/Root"        // Composant racine (layout principal)
+import Home from "@pages/Home"        // Page d'accueil
+import ErrorPage from "@pages/ErrorPage" // Page d'erreur 404
 
 /**
  * Rendu de l'application React
