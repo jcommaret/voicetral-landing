@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
-import Footer from '../../components/Footer';
-import siteContent from '../../data/content.json';
+import Footer from '@components/Footer';
+import siteContent from '@data/content.json';
 import { SiteContent } from '../../types';
 import './index.scss';
 
