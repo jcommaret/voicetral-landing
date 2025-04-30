@@ -10,7 +10,7 @@
  */
 import React from 'react';
 import { HeroContent } from '../../types';
-import { buildPath } from '@utils/pathUtils';
+import { getBasePath } from '@utils/pathUtils';
 import './Hero.scss';
 
 /**
@@ -32,7 +32,8 @@ interface HeroProps {
  */
 const Hero: React.FC<HeroProps> = ({ content, logoSrc }) => {
   // Construire le chemin complet du logo avec le bon basePath
-  const fullLogoPath = buildPath(logoSrc);
+  const basePath = getBasePath();
+  const fullLogoPath = `${basePath}/${logoSrc}`;
   
   return (
     <section className="hero">

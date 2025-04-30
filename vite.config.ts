@@ -9,6 +9,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   plugins: [react()],
   base: "/voicetral-landing/",
+  publicDir: "public",
+  build: {
+    assetsDir: "assets",
+    outDir: "dist",
+    emptyOutDir: true,
+    copyPublicDir: true
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

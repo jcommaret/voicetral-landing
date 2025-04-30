@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from '@components/Hero';
 import SEO from '@components/SEO';
-import logo from '@assets/logo/logo.png';
 import siteContent from '@data/content.json';
 import seoData from '@data/seo.json';
 import { SiteContent, SEOContent } from '../../types';
@@ -15,7 +14,7 @@ const Home: React.FC = () => {
     <>
       <SEO {...seo.home} />
       <div className="home">
-        <Hero content={content.hero} logoSrc={logo} />
+        <Hero content={content.hero} logoSrc="logo.png" />
       </div>
     </>
   );
