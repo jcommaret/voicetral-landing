@@ -39,7 +39,14 @@ const Hero: React.FC<HeroProps> = ({ content, logoSrc }) => {
       <div className="hero__content">
         {/* Logo de l'application */}
         <div className="hero__logo">
-          <img src={fullLogoPath} alt={`${content.title} Logo`} />
+          <img 
+            src={fullLogoPath} 
+            alt={`${content.title} Logo`}
+            onError={(e) => {
+              console.error('Erreur de chargement du logo:', e);
+              console.log('Chemin du logo:', fullLogoPath);
+            }}
+          />
         </div>
         
         {/* Titre principal */}
