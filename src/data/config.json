@@ -5,9 +5,6 @@
     "description": "Discutez naturellement avec une IA par la voix",
     "basePath": "/voicetral-landing"
   },
-  "images": {
-    "logo": "/images/logo.png"
-  },
   "env": {
     "development": {
       "basePath": ""
